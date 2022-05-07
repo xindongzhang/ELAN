@@ -1,0 +1,35 @@
+model: 'elan'
+## parameters for plain
+scale: 4
+rgb_range: 255
+colors: 3
+m_elan: 24
+c_elan: 60
+n_share: 1
+r_expand: 2
+act_type: 'relu'
+window_sizes: [4, 8, 16]
+pretrain:
+
+## parameters for model training
+patch_size: 256
+batch_size: 64
+data_repeat: 80
+data_augment: 1
+
+epochs: 1000
+lr: 0.0002
+decays: [250, 400, 450, 475, 500]
+gamma: 0.5
+log_every: 100
+test_every: 1
+log_path: "./experiments"
+log_name:
+
+## hardware specification
+gpu_ids: [0, 1, 2, 3]
+threads: 8
+
+## data specification
+data_path: '/home/xindongzhang/SR_datasets'
+eval_sets: ['Set5', 'Set14', 'B100', 'Urban100', 'Manga109']
