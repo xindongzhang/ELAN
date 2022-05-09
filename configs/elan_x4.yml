@@ -3,17 +3,17 @@ model: 'elan'
 scale: 4
 rgb_range: 255
 colors: 3
-m_elan: 24
-c_elan: 60
-n_share: 1
+m_elan: 36
+c_elan: 180
+n_share: 0
 r_expand: 2
 act_type: 'relu'
 window_sizes: [4, 8, 16]
 pretrain:
 
 ## parameters for model training
-patch_size: 256
-batch_size: 64
+patch_size: 192
+batch_size: 32
 data_repeat: 80
 data_augment: 1
 

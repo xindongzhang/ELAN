@@ -56,7 +56,7 @@ if __name__ == '__main__':
     ## definition of loss and optimizer
     loss_func = nn.L1Loss()
     optimizer = torch.optim.Adam(model.parameters(), lr=args.lr)
-    scheduler = StepLR(optimizer, step_size=args.decays, gamma=args.gamma)
+    scheduler = MultiStepLR(optimizer, milestones=args.decays, gamma=args.gamma)
 
     ## load pretrain
     if args.pretrain is not None:
